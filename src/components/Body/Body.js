@@ -9,7 +9,7 @@ const Body = () => {
     return (
         <div>
             <AddInfo refetch={refetch}></AddInfo>
-            <DisplayInfos info={info} isLoading={isLoading}></DisplayInfos>
+            <DisplayInfos info={info} isLoading={isLoading} refetch={refetch}></DisplayInfos>
         </div>
     );
 };

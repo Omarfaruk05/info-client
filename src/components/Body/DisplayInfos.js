@@ -1,7 +1,7 @@
 import DisplayInfo from './DisplayInfo';
 import Loading from './Loading';
 
-const DisplayInfos = ({info, isLoading}) => {
+const DisplayInfos = ({info, isLoading, refetch}) => {
 
     if(isLoading){
         return <Loading></Loading>
@@ -24,7 +24,7 @@ const DisplayInfos = ({info, isLoading}) => {
                     </thead>
                     <tbody>
                         {
-                            info.map(x => <DisplayInfo key={x._id} info={x}></DisplayInfo>)
+                            info.map(x => <DisplayInfo key={x._id} info={x} refetch={refetch}></DisplayInfo>)
                         }
                     </tbody>
                 </table>
