@@ -12,7 +12,7 @@ const AddInfo = ({refetch}) => {
 
         const info = {name, phoneNumber, email, hobbies};
         
-        fetch("http://localhost:5000/data",
+        fetch("https://nameless-ravine-57159.herokuapp.com/data",
         {
             method: 'POST',
             headers: {
@@ -48,10 +48,10 @@ const AddInfo = ({refetch}) => {
                             <input type="number" name='phone'  placeholder="Type Your Phone Number" className="input input-bordered w-full max-w-xs mb-2" required />
                             <input type="email" name='email' placeholder="Type Your Email" className="input input-bordered w-full max-w-xs mb-2" required />
                             <input type="text" name='hobbies' placeholder="Type Hobbies" className="input input-bordered w-full max-w-xs mb-2" required /><br />
-                            <button  type='submit'className='btn btn-danger mr-2' >
+                            <button  type='submit'className='btn btn-danger mr-2 bg-success text-white px-6' >
                                 <label htmlFor="add-modal">Save</label>
                             </button>
-                        <label htmlFor="add-modal" className="btn">Cancle</label>
+                        <label htmlFor="add-modal" className="btn bg-warning text-white">Cancle</label>
                         </form>
                    </div>
                    <div className="modal-action">

@@ -4,7 +4,7 @@ import { useQuery } from 'react-query'
 import DisplayInfos from './DisplayInfos';
 
 const Body = () => {
-    const {data: info, isLoading, refetch } = useQuery ('repoData', () => fetch('http://localhost:5000/data').then(res => res.json()));
+    const {data: info, isLoading, refetch } = useQuery ('repoData', () => fetch('https://nameless-ravine-57159.herokuapp.com/data').then(res => res.json()));
 
     return (
         <div>
